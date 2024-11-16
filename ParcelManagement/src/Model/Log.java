@@ -7,32 +7,36 @@ public class Log {
         log = new StringBuffer();
     }
 
-    // Method to add a log message
     public void addLog(String message) {
         log.append(message).append("\n");
     }
 
-    // Method to retrieve the complete log as a string
     public String getLog() {
         return log.toString();
     }
 
-    // Main method to run the application for testing
     public static void main(String[] args) {
-        Log log = new Log();  // Create a Log instance
+        Log log = new Log();
 
         // Example for ParcelMap
-        ParcelMap parcelMap = new ParcelMap(log);  // Pass the Log instance to ParcelMap
-        parcelMap.loadParcelsFromCSV("src/View/Parcels.csv");  // Load parcels
-        parcelMap.printParcelMap();  // Print the parcel map
+        ParcelMap parcelMap = new ParcelMap(log);
+        parcelMap.loadParcelsFromCSV("src/View/Parcels.csv");
+        System.out.println("Reading from the file...");
+//        parcelMap.printParcelMap();
+        System.out.println("The Parcel Map has been made");
 
         // Example for QueueofCustomers
-        QueueofCustomers queueOfCustomers = new QueueofCustomers(log);  // Pass Log instance to QueueofCustomers
-        queueOfCustomers.loadCustomersFromCSV("src/View/Customers.csv");  // Load customers
-        queueOfCustomers.printQueue();  // Print the queue of customers
+        QueueofCustomers queueOfCustomers = new QueueofCustomers(log);
+        queueOfCustomers.loadCustomersFromCSV("src/View/Customers.csv");
+        System.out.println("Reading from the file...");
+//        queueOfCustomers.printQueue();
+        System.out.println("The Customer Queue has been made");
 
-        // Output the log
-        System.out.println("Log Output:");
-        System.out.println(log.getLog());  // Print the accumulated log
+
+
+//        System.out.println("Log Output:");
+//        System.out.println(log.getLog());
+        System.out.println("The Customer Queue has been sorted according to the surnames");
+
     }
 }

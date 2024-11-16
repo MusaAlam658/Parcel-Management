@@ -3,91 +3,85 @@ package Model;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class QueueofCustomers {
     private Queue<Customer> queue;
-    private Log log;  // Log instance for logging actions
+    private Log log;
 
     public QueueofCustomers(Log log) {
         this.queue = new LinkedList<>();
-        this.log = log;  // Pass the Log instance
+        this.log = log;
     }
 
     public void addCustomer(Customer customer) {
         queue.add(customer);
-        log.addLog("Added customer with ID: " + customer.getId());
+        log.addLog("Added customer: " + customer);
     }
 
     public Customer processCustomer() {
-        Customer customer = queue.poll();  // Removes and returns the first customer in the queue
+        Customer customer = queue.poll();
         if (customer != null) {
-            log.addLog("Processing customer with ID: " + customer.getId());
+            log.addLog("Processing customer: " + customer);
+        } else {
+            log.addLog("No customers to process.");
         }
         return customer;
     }
 
-    // Method to load customers from a CSV file, sort them by surname, and assign sequence numbers
     public void loadCustomersFromCSV(String filePath) {
-        log.addLog("Starting to read CSV file: " + filePath);  // Log the start of CSV reading
+        log.addLog("Starting to load customers from: " + filePath);
 
         List<Customer> customerList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
-            br.readLine();  // Skip the header line
+            br.readLine(); // Skip header
+            int seqNo = 1;
 
-            int seqNo = 1;  // Sequence number for customers
             while ((line = br.readLine()) != null) {
-                String[] data = line.split(",");  // Split on comma
+                String[] data = line.split(",");
                 if (data.length >= 2) {
                     String customerName = data[0].trim();
                     String customerId = data[1].trim();
 
-                    // Create a new Customer object and assign a sequence number
                     Customer customer = new Customer(customerName, customerId, seqNo++);
                     customerList.add(customer);
-                    log.addLog("Loaded customer: " + customerName + " (ID: " + customerId + ")");
+                    log.addLog("Loaded customer: " + customer);
                 } else {
-                    log.addLog("Invalid data format: " + line);  // Log invalid data format
+                    log.addLog("Invalid data format in CSV line: " + line);
                 }
             }
 
-            // Sort the customers by surname (assuming surname is the first part of the name)
-            Collections.sort(customerList, new Comparator<Customer>() {
-                @Override
-                public int compare(Customer c1, Customer c2) {
-                    String surname1 = c1.getName().split(" ")[1];  // Assuming name is "First Last"
-                    String surname2 = c2.getName().split(" ")[1];  // Assuming name is "First Last"
-                    return surname1.compareTo(surname2);
-                }
+            customerList.sort((c1, c2) -> {
+                String surname1 = extractSurname(c1.getName());
+                String surname2 = extractSurname(c2.getName());
+                return surname1.compareTo(surname2);
             });
 
-            // Add customers to the queue
             for (Customer customer : customerList) {
                 addCustomer(customer);
             }
 
-            log.addLog("Finished reading CSV file: " + filePath);  // Log the end of file reading
+            log.addLog("Finished loading customers.");
         } catch (IOException e) {
-            log.addLog("Error reading customers from file: " + e.getMessage());  // Log IO exceptions
+            log.addLog("Error reading CSV file: " + e.getMessage());
         }
     }
 
-    // Method to print all customers in the queue with logging
+    private String extractSurname(String name) {
+        String[] parts = name.split(" ");
+        return parts.length > 1 ? parts[1] : parts[0];
+    }
+
     public void printQueue() {
         if (queue.isEmpty()) {
-            log.addLog("No customers in the queue.");
             System.out.println("No customers in the queue.");
+            log.addLog("No customers in the queue.");
         } else {
             System.out.println("Customers in the queue:");
             for (Customer customer : queue) {
-                log.addLog("Customer ID: " + customer.getId() + " -> " + customer.getName() + " (Seq No: " + customer.getSeqNo() + ")");
-                System.out.println(customer.getId() + " -> " + customer.getName() + " (Seq No: " + customer.getSeqNo() + ")");
+                System.out.println(customer);
+                log.addLog("Customer in queue: " + customer);
             }
         }
     }

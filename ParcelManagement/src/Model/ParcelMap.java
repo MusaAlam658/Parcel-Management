@@ -48,12 +48,12 @@ public class ParcelMap {
                         String parcelId = data[0];
                         int daysInDepot = Integer.parseInt(data[1]);
                         double weight = Double.parseDouble(data[2]);
-                        double dimension1 = Double.parseDouble(data[3]); // Length
-                        double dimension2 = Double.parseDouble(data[4]); // Width
-                        double dimension3 = Double.parseDouble(data[5]); // Height
+                        double length = Double.parseDouble(data[3]); // Length
+                        double width = Double.parseDouble(data[4]); // Width
+                        double height = Double.parseDouble(data[5]); // Height
 
                         // Create a new Parcel object
-                        Parcel parcel = new Parcel(parcelId, daysInDepot, weight, dimension1, dimension2, dimension3);
+                        Parcel parcel = new Parcel(parcelId, daysInDepot, weight, length, width, height);
 
                         // Add it to the map
                         addParcel(parcel);

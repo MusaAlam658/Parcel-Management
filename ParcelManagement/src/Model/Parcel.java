@@ -4,17 +4,17 @@ public class Parcel {
     private String id;
     private int daysInDepot;
     private double weight;
-    private double dimension1;
-    private double dimension2;
-    private double dimension3;
+    private double length;
+    private double width;
+    private double height;
 
-    public Parcel(String id, int daysInDepot, double weight, double dimension1, double dimension2, double dimension3) {
+    public Parcel(String id, int daysInDepot, double weight, double length, double width, double height) {
         this.id = id;
         this.daysInDepot = daysInDepot;
         this.weight = weight;
-        this.dimension1 = dimension1;
-        this.dimension2 = dimension2;
-        this.dimension3 = dimension3;
+        this.length = length;
+        this.width = width;
+        this.height = height;
     }
 
     public String getId() {
@@ -29,25 +29,24 @@ public class Parcel {
         return weight;
     }
 
-    public double getDimension1() {
-        return dimension1;
+    public double getLength() {
+        return length;
     }
 
-    public double getDimension2() {
-        return dimension2;
+    public double getWidth() {
+        return width;
     }
 
-    public double getDimension3() {
-        return dimension3;
+    public double getHeight() {
+        return height;
     }
 
+    // String representation of parcel details
     @Override
     public String toString() {
-        return "Parcel{" +
-                "id='" + id + '\'' +
-                ", daysInDepot=" + daysInDepot +
-                ", weight=" + weight +
-                ", dimensions=(" + dimension1 + ", " + dimension2 + ", " + dimension3 + ")" +
-                '}';
+        return "Parcel{id='" + id + '\'' +
+               ", daysInDepot=" + daysInDepot +
+               ", weight=" + weight +
+               ", dimensions=(" + "length=" + length + ", width=" + width + ", height=" + height + ")}";
     }
 }
