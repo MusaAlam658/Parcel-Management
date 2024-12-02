@@ -1,13 +1,12 @@
 package Model;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class QueueofCustomers {
     private Queue<Customer> queue;
     private Log log;
+    private static final String CSV_FILE_PATH = "src/View/Customers.csv";
 
     public QueueofCustomers(Log log) {
         this.queue = new LinkedList<>();
@@ -15,9 +14,31 @@ public class QueueofCustomers {
     }
 
     public void addCustomer(Customer customer) {
+    	int seqNo = queue.size() + 1;
+        customer.setSeqNo(seqNo);
         queue.add(customer);
+
         log.addLog("Added customer: " + customer);
+
+        // Sort the queue by surname
+        sortQueueBySurname();
     }
+    
+    public void sortQueueBySurname() {
+        List<Customer> customerList = new ArrayList<>(queue);
+
+        customerList.sort(Comparator.comparing(c -> extractSurname(c.getName())));
+
+        queue.clear();
+        for (int i = 0; i < customerList.size(); i++) {
+            Customer customer = customerList.get(i);
+            customer.setSeqNo(i + 1);
+            queue.add(customer);
+        }
+
+        log.addLog("Queue sorted by customer surnames.");
+    }
+
 
     public Customer processCustomer() {
         Customer customer = queue.poll();
@@ -29,13 +50,13 @@ public class QueueofCustomers {
         return customer;
     }
 
-    public void loadCustomersFromCSV(String filePath) {
-        log.addLog("Starting to load customers from: " + filePath);
-
+    // Load customers from CSV into the queue
+    public void loadCustomersFromCSV() {
+        log.addLog("Starting to load customers from: " + CSV_FILE_PATH);
         List<Customer> customerList = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
             String line;
-            br.readLine(); // Skip header
+            br.readLine();
             int seqNo = 1;
 
             while ((line = br.readLine()) != null) {
@@ -52,11 +73,7 @@ public class QueueofCustomers {
                 }
             }
 
-            customerList.sort((c1, c2) -> {
-                String surname1 = extractSurname(c1.getName());
-                String surname2 = extractSurname(c2.getName());
-                return surname1.compareTo(surname2);
-            });
+            customerList.sort(Comparator.comparing(c -> extractSurname(c.getName())));
 
             for (Customer customer : customerList) {
                 addCustomer(customer);
@@ -73,6 +90,44 @@ public class QueueofCustomers {
         return parts.length > 1 ? parts[1] : parts[0];
     }
 
+    // Delete a customer
+    public void deleteCustomerBySeqNo(int seqNo) {
+        boolean found = false;
+        List<Customer> updatedList = new ArrayList<>();
+        for (Customer customer : queue) {
+            if (customer.getSeqNo() != seqNo) {
+                updatedList.add(customer);
+            } else {
+                found = true;
+                log.addLog("Deleted customer: " + customer);
+            }
+        }
+
+        if (found) {
+            queue.clear();
+            queue.addAll(updatedList);
+            saveCustomersToCSV(updatedList); 
+            System.out.println("Customer with Sequence Number " + seqNo + " has been deleted.");
+        } else {
+            log.addLog("Customer with Sequence Number " + seqNo + " not found.");
+            System.out.println("Customer with Sequence Number " + seqNo + " not found.");
+        }
+    }
+
+    // Save updated customer list back to CSV
+    private void saveCustomersToCSV(List<Customer> updatedList) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(CSV_FILE_PATH))) {
+            writer.write("Name,ID,SeqNo\n");
+            for (Customer customer : updatedList) {
+                writer.write(customer.getName() + "," + customer.getId() + "," + customer.getSeqNo() + "\n");
+            }
+            log.addLog("Updated customers saved to CSV.");
+        } catch (IOException e) {
+            log.addLog("Error saving customers to CSV: " + e.getMessage());
+        }
+    }
+
+    // Print all customers in the queue
     public void printQueue() {
         if (queue.isEmpty()) {
             System.out.println("No customers in the queue.");
@@ -85,4 +140,6 @@ public class QueueofCustomers {
             }
         }
     }
+    
+    
 }

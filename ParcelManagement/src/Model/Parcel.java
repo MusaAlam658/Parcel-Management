@@ -7,6 +7,10 @@ public class Parcel {
     private double length;
     private double width;
     private double height;
+    private String status;
+    private double fee;
+    private double discount;
+    private double totalPrice;
 
     public Parcel(String id, int daysInDepot, double weight, double length, double width, double height) {
         this.id = id;
@@ -15,38 +19,38 @@ public class Parcel {
         this.length = length;
         this.width = width;
         this.height = height;
+        this.status = "COLLECTING";
+        this.fee = 0.0;
+        this.discount = 0.0;
+        this.totalPrice = 0.0;
     }
 
-    public String getId() {
-        return id;
-    }
+    // Getters and setters
+    public String getId() { return id; }
+    public int getDaysInDepot() { return daysInDepot; }
+    public double getWeight() { return weight; }
+    public double getLength() { return length; }
+    public double getWidth() { return width; }
+    public double getHeight() { return height; }
+    public String getStatus() { return status; }
+    public double getFee() { return fee; }
+    public void setFee(double fee) { this.fee = fee; }
+    public double getDiscount() { return discount; }
+    public void setDiscount(double discount) { this.discount = discount; }
+    public double getTotalPrice() { return totalPrice; }
+    public void setTotalPrice(double totalPrice) { this.totalPrice = totalPrice; }
 
-    public int getDaysInDepot() {
-        return daysInDepot;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    // String representation of parcel details
     @Override
     public String toString() {
-        return "Parcel{id='" + id + '\'' +
-               ", daysInDepot=" + daysInDepot +
+        return "daysInDepot=" + daysInDepot +
                ", weight=" + weight +
-               ", dimensions=(" + "length=" + length + ", width=" + width + ", height=" + height + ")}";
+               ", length=" + length +
+               ", width=" + width +
+               ", height=" + height +
+               ", status=" + status +
+               ", discount=" + discount +
+               ", Fee: " + fee +
+               ", totalPrice=" + totalPrice;
     }
+
 }

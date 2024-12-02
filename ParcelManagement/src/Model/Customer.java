@@ -11,16 +11,24 @@ public class Customer {
         this.seqNo = seqNo;
     }
 
+    //Getter for Name
     public String getName() {
         return name;
     }
-
+    
+    //Getter for Parcel ID
     public String getId() {
         return id;
     }
 
+    //Getter for Customer Sequence Number
     public int getSeqNo() {
         return seqNo;
+    }
+
+    //Setter for Customer Sequence Number
+    public void setSeqNo(int seqNo) {
+        this.seqNo = seqNo;
     }
 
     @Override
