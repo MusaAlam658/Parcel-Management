@@ -32,7 +32,7 @@ public class Parcel {
     public double getLength() { return length; }
     public double getWidth() { return width; }
     public double getHeight() { return height; }
-    public String getStatus() { return status; }
+//    public void setStatus(String status) { this.status = status; }  // setter for status
     public double getFee() { return fee; }
     public void setFee(double fee) { this.fee = fee; }
     public double getDiscount() { return discount; }
@@ -40,6 +40,13 @@ public class Parcel {
     public double getTotalPrice() { return totalPrice; }
     public void setTotalPrice(double totalPrice) { this.totalPrice = totalPrice; }
 
+ // Ensure getStatus is defined
+    public String getStatus() { return status; }
+
+    public void setStatus(String status) { 
+        this.status = status; 
+    }
+    
     @Override
     public String toString() {
         return "daysInDepot=" + daysInDepot +

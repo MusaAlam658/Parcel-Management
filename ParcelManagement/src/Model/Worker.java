@@ -30,7 +30,7 @@ public class Worker {
             log.addLog("Successfully added parcel with ID: " + parcel.getId());
             System.out.println("Parcel added successfully.");
         } catch (IOException e) {
-            log.addLog("Failed to add parcel: " + e.getMessage());
+            System.out.println("Failed to add parcel: " + e.getMessage());
             System.out.println("Error: Could not add parcel.");
         }
     }
@@ -80,10 +80,10 @@ public class Worker {
     public void deleteParcelById(String parcelId, ParcelMap parcelMap) {
         Parcel removedParcel = parcelMap.removeParcel(parcelId); 
         if (removedParcel != null) {
-            log.addLog("Successfully deleted parcel with ID: " + parcelId);
+            System.out.println("Successfully deleted parcel with ID: " + parcelId);
             System.out.println("Parcel with ID: " + parcelId + " has been deleted.");
         } else {
-            log.addLog("Parcel with ID: " + parcelId + " not found.");
+            System.out.println("Parcel with ID: " + parcelId + " not found.");
             System.out.println("Parcel with ID: " + parcelId + " not found.");
         }
     }
@@ -92,11 +92,11 @@ public class Worker {
     public Parcel searchParcelById(String parcelId, ParcelMap parcelMap) {
         Parcel parcel = parcelMap.getParcelById(parcelId); // Look up the parcel in the ParcelMap
         if (parcel != null) {
-            log.addLog("Parcel found: " + parcelId);
+            System.out.println("Parcel found: " + parcelId);
             System.out.println("Parcel found: " + parcel);
             return parcel;
         } else {
-            log.addLog("Parcel with ID: " + parcelId + " not found.");
+            System.out.println("Parcel with ID: " + parcelId + " not found.");
             System.out.println("Parcel with ID: " + parcelId + " not found.");
             return null;
         }
@@ -105,7 +105,7 @@ public class Worker {
     
     public void addCustomer(Customer customer, QueueofCustomers customerQueue) {
         customerQueue.addCustomer(customer);
-        log.addLog("Worker added customer: " + customer);
+        System.out.println("Worker added customer: " + customer);
     }
 }
 

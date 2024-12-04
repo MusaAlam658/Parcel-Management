@@ -33,9 +33,9 @@ public class ParcelMap {
     public Parcel getParcelById(String parcelId) {
         Parcel parcel = parcelMap.get(parcelId);
         if (parcel != null) {
-            log.addLog("Retrieved parcel with ID: " + parcelId);
+            System.out.println("Retrieved parcel with ID: " + parcelId);
         } else {
-            log.addLog("Parcel with ID " + parcelId + " not found.");
+            System.out.println("Parcel with ID " + parcelId + " not found.");
         }
         return parcel;
     }
@@ -44,9 +44,9 @@ public class ParcelMap {
     public Parcel removeParcel(String parcelId) {
         Parcel removedParcel = parcelMap.remove(parcelId);
         if (removedParcel != null) {
-            log.addLog("Removed parcel with ID: " + parcelId);
+            System.out.println("Removed parcel with ID: " + parcelId);
         } else {
-            log.addLog("Error: Parcel with ID '" + parcelId + "' does not exist.");
+            System.out.println("Error: Parcel with ID '" + parcelId + "' does not exist.");
         }
         return removedParcel;
     }
@@ -55,7 +55,7 @@ public class ParcelMap {
 
     // Load parcels from CSV
     public void loadParcelsFromCSV(String filePath) {
-        log.addLog("Starting to read CSV file: " + filePath);
+        System.out.println("Starting to read CSV file: " + filePath);
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             br.readLine();
@@ -75,25 +75,25 @@ public class ParcelMap {
 
                         addParcel(parcel);
                     } catch (NumberFormatException e) {
-                        log.addLog("Error parsing numeric values in line: " + line + " (" + e.getMessage() + ")");
+                        System.out.println("Error parsing numeric values in line: " + line + " (" + e.getMessage() + ")");
                     }
                 } else {
-                    log.addLog("Invalid data format (missing fields): " + line);
+                    System.out.println("Invalid data format (missing fields): " + line);
                 }
             }
-            log.addLog("Finished reading CSV file: " + filePath);
+            System.out.println("Finished reading CSV file: " + filePath);
         } catch (IOException e) {
-            log.addLog("Error reading parcels from file: " + e.getMessage());
+            System.out.println("Error reading parcels from file: " + e.getMessage());
         }
     }
 
     // Print the parcel list
     public void printParcelMap() {
         if (parcelMap.isEmpty()) {
-            log.addLog("No parcels loaded.");
+            System.out.println("No parcels loaded.");
             System.out.println("No parcels loaded.");
         } else {
-            log.addLog("Parcels in the map:");
+            System.out.println("Parcels in the map:");
             System.out.println("Parcels in the map:");
             for (Map.Entry<String, Parcel> entry : parcelMap.entrySet()) {
                 String parcelId = entry.getKey();
@@ -102,6 +102,25 @@ public class ParcelMap {
             }
         }
     }
+    
+ // Add this method in the ParcelMap class
+    public void printCollectedParcels() {
+        if (parcelMap.isEmpty()) {
+            System.out.println("No parcels loaded.");
+        } else {
+            System.out.println("Collected Parcels:");
+            for (Map.Entry<String, Parcel> entry : parcelMap.entrySet()) {
+                String parcelId = entry.getKey();
+                Parcel parcel = entry.getValue();
+                if ("COLLECTED".equalsIgnoreCase(parcel.getStatus())) {
+                    System.out.println("Parcel ID: " + parcelId + " , " + parcel);
+                }
+            }
+        }
+    }
+
+
+
 
 
     //Calculate the parcel Fee
@@ -114,7 +133,7 @@ public class ParcelMap {
         if (parcel.getDaysInDepot() > 7) {
             double lateFee = (parcel.getDaysInDepot() - 7) * 5.0;
             totalFee += lateFee;
-            log.addLog("Late fee applied for Parcel ID: " + parcel.getId() + 
+            System.out.println("Late fee applied for Parcel ID: " + parcel.getId() + 
                        " -> Days in Depot: " + parcel.getDaysInDepot() + 
                        ", Late Fee: " + lateFee);
         }
@@ -124,7 +143,7 @@ public class ParcelMap {
         if (parcel.getId().endsWith("5")) {
             discount = 5.0;
             totalFee -= discount;
-            log.addLog("Discount applied for Parcel ID: " + parcel.getId() + 
+            System.out.println("Discount applied for Parcel ID: " + parcel.getId() + 
                        " -> Discount: " + discount);
         }
 
@@ -135,7 +154,7 @@ public class ParcelMap {
         parcel.setDiscount(discount);
         parcel.setTotalPrice(totalPrice);
 
-        log.addLog("Calculated fee for Parcel ID: " + parcel.getId() + 
+        System.out.println("Calculated fee for Parcel ID: " + parcel.getId() + 
                    " -> Base Fee: " + baseFee + ", Weight Fee: " + weightFee + 
                    ", Discount: " + discount + ", Total Price: " + totalPrice);
         return totalFee;

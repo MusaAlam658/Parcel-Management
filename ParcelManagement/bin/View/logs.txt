@@ -1,0 +1,506 @@
+Starting to read CSV file: src/View/Parcels.csv
+Calculated fee for Parcel ID: X020 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X020 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Discount applied for Parcel ID: X025 -> Discount: 5.0
+Calculated fee for Parcel ID: X025 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 5.0, Total Price: 7.0
+Added parcel with ID: X025 with default status: COLLECTING, Fee: 7.0, Discount: 5.0, Total Price: 7.0
+Late fee applied for Parcel ID: X036 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X036 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 23.0
+Added parcel with ID: X036 with default status: COLLECTING, Fee: 23.0, Discount: 0.0, Total Price: 23.0
+Late fee applied for Parcel ID: X064 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X064 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 23.0
+Added parcel with ID: X064 with default status: COLLECTING, Fee: 23.0, Discount: 0.0, Total Price: 23.0
+Calculated fee for Parcel ID: X086 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 18.0
+Added parcel with ID: X086 with default status: COLLECTING, Fee: 18.0, Discount: 0.0, Total Price: 18.0
+Calculated fee for Parcel ID: X121 -> Base Fee: 10.0, Weight Fee: 14.0, Discount: 0.0, Total Price: 24.0
+Added parcel with ID: X121 with default status: COLLECTING, Fee: 24.0, Discount: 0.0, Total Price: 24.0
+Late fee applied for Parcel ID: X198 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X198 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 28.0
+Added parcel with ID: X198 with default status: COLLECTING, Fee: 28.0, Discount: 0.0, Total Price: 28.0
+Calculated fee for Parcel ID: X213 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 26.0
+Added parcel with ID: X213 with default status: COLLECTING, Fee: 26.0, Discount: 0.0, Total Price: 26.0
+Calculated fee for Parcel ID: X214 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 26.0
+Added parcel with ID: X214 with default status: COLLECTING, Fee: 26.0, Discount: 0.0, Total Price: 26.0
+Calculated fee for Parcel ID: X278 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X278 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Discount applied for Parcel ID: X285 -> Discount: 5.0
+Calculated fee for Parcel ID: X285 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 5.0, Total Price: 13.0
+Added parcel with ID: X285 with default status: COLLECTING, Fee: 13.0, Discount: 5.0, Total Price: 13.0
+Calculated fee for Parcel ID: X309 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X309 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Late fee applied for Parcel ID: X316 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X316 -> Base Fee: 10.0, Weight Fee: 10.0, Discount: 0.0, Total Price: 30.0
+Added parcel with ID: X316 with default status: COLLECTING, Fee: 30.0, Discount: 0.0, Total Price: 30.0
+Late fee applied for Parcel ID: X386 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X386 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X386 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Discount applied for Parcel ID: X475 -> Discount: 5.0
+Calculated fee for Parcel ID: X475 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 5.0, Total Price: 11.0
+Added parcel with ID: X475 with default status: COLLECTING, Fee: 11.0, Discount: 5.0, Total Price: 11.0
+Calculated fee for Parcel ID: X507 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X507 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Calculated fee for Parcel ID: X521 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 18.0
+Added parcel with ID: X521 with default status: COLLECTING, Fee: 18.0, Discount: 0.0, Total Price: 18.0
+Late fee applied for Parcel ID: X540 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X540 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 24.0
+Added parcel with ID: X540 with default status: COLLECTING, Fee: 24.0, Discount: 0.0, Total Price: 24.0
+Calculated fee for Parcel ID: X552 -> Base Fee: 10.0, Weight Fee: 10.0, Discount: 0.0, Total Price: 20.0
+Added parcel with ID: X552 with default status: COLLECTING, Fee: 20.0, Discount: 0.0, Total Price: 20.0
+Late fee applied for Parcel ID: X606 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X606 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 31.0
+Added parcel with ID: X606 with default status: COLLECTING, Fee: 31.0, Discount: 0.0, Total Price: 31.0
+Calculated fee for Parcel ID: X682 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X682 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X720 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X720 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Calculated fee for Parcel ID: X733 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X733 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X746 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 18.0
+Added parcel with ID: X746 with default status: COLLECTING, Fee: 18.0, Discount: 0.0, Total Price: 18.0
+Calculated fee for Parcel ID: X780 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X780 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Calculated fee for Parcel ID: X782 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X782 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Calculated fee for Parcel ID: X857 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X857 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X904 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X904 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Calculated fee for Parcel ID: X919 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 26.0
+Added parcel with ID: X919 with default status: COLLECTING, Fee: 26.0, Discount: 0.0, Total Price: 26.0
+Calculated fee for Parcel ID: X233 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X233 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Late fee applied for Parcel ID: X212 -> Days in Depot: 21, Late Fee: 70.0
+Calculated fee for Parcel ID: X212 -> Base Fee: 10.0, Weight Fee: 42.0, Discount: 0.0, Total Price: 122.0
+Added parcel with ID: X212 with default status: COLLECTING, Fee: 122.0, Discount: 0.0, Total Price: 122.0
+Late fee applied for Parcel ID: X999 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X999 -> Base Fee: 10.0, Weight Fee: 18.0, Discount: 0.0, Total Price: 38.0
+Added parcel with ID: X999 with default status: COLLECTING, Fee: 38.0, Discount: 0.0, Total Price: 38.0
+Late fee applied for Parcel ID: X888 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X888 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 31.0
+Added parcel with ID: X888 with default status: COLLECTING, Fee: 31.0, Discount: 0.0, Total Price: 31.0
+Discount applied for Parcel ID: X555 -> Discount: 5.0
+Calculated fee for Parcel ID: X555 -> Base Fee: 10.0, Weight Fee: 10.0, Discount: 5.0, Total Price: 15.0
+Added parcel with ID: X555 with default status: COLLECTING, Fee: 15.0, Discount: 5.0, Total Price: 15.0
+Calculated fee for Parcel ID: X111 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X111 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Calculated fee for Parcel ID: X666 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X666 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X333 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X333 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Calculated fee for Parcel ID: X222 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X222 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Calculated fee for Parcel ID: X344 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X344 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Late fee applied for Parcel ID: X123 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X123 -> Base Fee: 10.0, Weight Fee: 18.0, Discount: 0.0, Total Price: 38.0
+Added parcel with ID: X123 with default status: COLLECTING, Fee: 38.0, Discount: 0.0, Total Price: 38.0
+Finished reading CSV file: src/View/Parcels.csv
+Starting to load customers from: src/View/Customers.csv
+Loaded customer: John Brown (ID: X009, Seq No: 1)
+Loaded customer: Mary Brown (ID: X198, Seq No: 2)
+Loaded customer: Keith Burns (ID: X552, Seq No: 3)
+Loaded customer: Pamela Field (ID: X521, Seq No: 4)
+Loaded customer: Blair Foster (ID: X682, Seq No: 5)
+Loaded customer: Phillip Galleghar (ID: X212, Seq No: 6)
+Loaded customer: Lucy Grey (ID: X025, Seq No: 7)
+Loaded customer: Gillian Hamilton (ID: X386, Seq No: 8)
+Loaded customer: Jo Hill (ID: X285, Seq No: 9)
+Loaded customer: Jack Houston (ID: X733, Seq No: 10)
+Loaded customer: David Hunter (ID: X278, Seq No: 11)
+Loaded customer: Harry Johnston (ID: X857, Seq No: 12)
+Loaded customer: Ann Jones (ID: X064, Seq No: 13)
+Loaded customer: Carl Jones (ID: X212, Seq No: 14)
+Loaded customer: Gemma Kevin (ID: X888, Seq No: 15)
+Loaded customer: Tony Lawson (ID: X086, Seq No: 16)
+Loaded customer: Viola Nicholson (ID: X540, Seq No: 17)
+Loaded customer: Joe Woods (ID: X213, Seq No: 18)
+Added customer: John Brown (ID: X009, Seq No: 1)
+Queue sorted by customer surnames.
+Added customer: Mary Brown (ID: X198, Seq No: 2)
+Queue sorted by customer surnames.
+Added customer: Keith Burns (ID: X552, Seq No: 3)
+Queue sorted by customer surnames.
+Added customer: Pamela Field (ID: X521, Seq No: 4)
+Queue sorted by customer surnames.
+Added customer: Blair Foster (ID: X682, Seq No: 5)
+Queue sorted by customer surnames.
+Added customer: Phillip Galleghar (ID: X212, Seq No: 6)
+Queue sorted by customer surnames.
+Added customer: Lucy Grey (ID: X025, Seq No: 7)
+Queue sorted by customer surnames.
+Added customer: Gillian Hamilton (ID: X386, Seq No: 8)
+Queue sorted by customer surnames.
+Added customer: Jo Hill (ID: X285, Seq No: 9)
+Queue sorted by customer surnames.
+Added customer: Jack Houston (ID: X733, Seq No: 10)
+Queue sorted by customer surnames.
+Added customer: David Hunter (ID: X278, Seq No: 11)
+Queue sorted by customer surnames.
+Added customer: Harry Johnston (ID: X857, Seq No: 12)
+Queue sorted by customer surnames.
+Added customer: Ann Jones (ID: X064, Seq No: 13)
+Queue sorted by customer surnames.
+Added customer: Carl Jones (ID: X212, Seq No: 14)
+Queue sorted by customer surnames.
+Added customer: Gemma Kevin (ID: X888, Seq No: 15)
+Queue sorted by customer surnames.
+Added customer: Tony Lawson (ID: X086, Seq No: 16)
+Queue sorted by customer surnames.
+Added customer: Viola Nicholson (ID: X540, Seq No: 17)
+Queue sorted by customer surnames.
+Added customer: Joe Woods (ID: X213, Seq No: 18)
+Queue sorted by customer surnames.
+Finished loading customers.
+Print the Parcel Map
+Parcels in the map:
+Starting to read CSV file: src/View/Parcels.csv
+Calculated fee for Parcel ID: X020 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X020 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Discount applied for Parcel ID: X025 -> Discount: 5.0
+Calculated fee for Parcel ID: X025 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 5.0, Total Price: 7.0
+Added parcel with ID: X025 with default status: COLLECTING, Fee: 7.0, Discount: 5.0, Total Price: 7.0
+Late fee applied for Parcel ID: X036 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X036 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 23.0
+Added parcel with ID: X036 with default status: COLLECTING, Fee: 23.0, Discount: 0.0, Total Price: 23.0
+Late fee applied for Parcel ID: X064 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X064 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 23.0
+Added parcel with ID: X064 with default status: COLLECTING, Fee: 23.0, Discount: 0.0, Total Price: 23.0
+Calculated fee for Parcel ID: X086 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 18.0
+Added parcel with ID: X086 with default status: COLLECTING, Fee: 18.0, Discount: 0.0, Total Price: 18.0
+Calculated fee for Parcel ID: X121 -> Base Fee: 10.0, Weight Fee: 14.0, Discount: 0.0, Total Price: 24.0
+Added parcel with ID: X121 with default status: COLLECTING, Fee: 24.0, Discount: 0.0, Total Price: 24.0
+Late fee applied for Parcel ID: X198 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X198 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 28.0
+Added parcel with ID: X198 with default status: COLLECTING, Fee: 28.0, Discount: 0.0, Total Price: 28.0
+Calculated fee for Parcel ID: X213 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 26.0
+Added parcel with ID: X213 with default status: COLLECTING, Fee: 26.0, Discount: 0.0, Total Price: 26.0
+Calculated fee for Parcel ID: X214 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 26.0
+Added parcel with ID: X214 with default status: COLLECTING, Fee: 26.0, Discount: 0.0, Total Price: 26.0
+Calculated fee for Parcel ID: X278 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X278 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Discount applied for Parcel ID: X285 -> Discount: 5.0
+Calculated fee for Parcel ID: X285 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 5.0, Total Price: 13.0
+Added parcel with ID: X285 with default status: COLLECTING, Fee: 13.0, Discount: 5.0, Total Price: 13.0
+Calculated fee for Parcel ID: X309 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X309 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Late fee applied for Parcel ID: X316 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X316 -> Base Fee: 10.0, Weight Fee: 10.0, Discount: 0.0, Total Price: 30.0
+Added parcel with ID: X316 with default status: COLLECTING, Fee: 30.0, Discount: 0.0, Total Price: 30.0
+Late fee applied for Parcel ID: X386 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X386 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X386 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Discount applied for Parcel ID: X475 -> Discount: 5.0
+Calculated fee for Parcel ID: X475 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 5.0, Total Price: 11.0
+Added parcel with ID: X475 with default status: COLLECTING, Fee: 11.0, Discount: 5.0, Total Price: 11.0
+Calculated fee for Parcel ID: X507 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X507 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Calculated fee for Parcel ID: X521 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 18.0
+Added parcel with ID: X521 with default status: COLLECTING, Fee: 18.0, Discount: 0.0, Total Price: 18.0
+Late fee applied for Parcel ID: X540 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X540 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 24.0
+Added parcel with ID: X540 with default status: COLLECTING, Fee: 24.0, Discount: 0.0, Total Price: 24.0
+Calculated fee for Parcel ID: X552 -> Base Fee: 10.0, Weight Fee: 10.0, Discount: 0.0, Total Price: 20.0
+Added parcel with ID: X552 with default status: COLLECTING, Fee: 20.0, Discount: 0.0, Total Price: 20.0
+Late fee applied for Parcel ID: X606 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X606 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 31.0
+Added parcel with ID: X606 with default status: COLLECTING, Fee: 31.0, Discount: 0.0, Total Price: 31.0
+Calculated fee for Parcel ID: X682 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X682 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X720 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X720 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Calculated fee for Parcel ID: X733 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X733 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X746 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 18.0
+Added parcel with ID: X746 with default status: COLLECTING, Fee: 18.0, Discount: 0.0, Total Price: 18.0
+Calculated fee for Parcel ID: X780 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X780 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Calculated fee for Parcel ID: X782 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X782 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Calculated fee for Parcel ID: X857 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X857 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X904 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X904 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Calculated fee for Parcel ID: X919 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 26.0
+Added parcel with ID: X919 with default status: COLLECTING, Fee: 26.0, Discount: 0.0, Total Price: 26.0
+Calculated fee for Parcel ID: X233 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X233 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Late fee applied for Parcel ID: X212 -> Days in Depot: 21, Late Fee: 70.0
+Calculated fee for Parcel ID: X212 -> Base Fee: 10.0, Weight Fee: 42.0, Discount: 0.0, Total Price: 122.0
+Added parcel with ID: X212 with default status: COLLECTING, Fee: 122.0, Discount: 0.0, Total Price: 122.0
+Late fee applied for Parcel ID: X999 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X999 -> Base Fee: 10.0, Weight Fee: 18.0, Discount: 0.0, Total Price: 38.0
+Added parcel with ID: X999 with default status: COLLECTING, Fee: 38.0, Discount: 0.0, Total Price: 38.0
+Late fee applied for Parcel ID: X888 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X888 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 31.0
+Added parcel with ID: X888 with default status: COLLECTING, Fee: 31.0, Discount: 0.0, Total Price: 31.0
+Discount applied for Parcel ID: X555 -> Discount: 5.0
+Calculated fee for Parcel ID: X555 -> Base Fee: 10.0, Weight Fee: 10.0, Discount: 5.0, Total Price: 15.0
+Added parcel with ID: X555 with default status: COLLECTING, Fee: 15.0, Discount: 5.0, Total Price: 15.0
+Calculated fee for Parcel ID: X111 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X111 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Calculated fee for Parcel ID: X666 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X666 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X333 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X333 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Calculated fee for Parcel ID: X222 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X222 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Calculated fee for Parcel ID: X344 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X344 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Late fee applied for Parcel ID: X123 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X123 -> Base Fee: 10.0, Weight Fee: 18.0, Discount: 0.0, Total Price: 38.0
+Added parcel with ID: X123 with default status: COLLECTING, Fee: 38.0, Discount: 0.0, Total Price: 38.0
+Finished reading CSV file: src/View/Parcels.csv
+Starting to load customers from: src/View/Customers.csv
+Loaded customer: John Brown (ID: X009, Seq No: 1)
+Loaded customer: Mary Brown (ID: X198, Seq No: 2)
+Loaded customer: Keith Burns (ID: X552, Seq No: 3)
+Loaded customer: Pamela Field (ID: X521, Seq No: 4)
+Loaded customer: Blair Foster (ID: X682, Seq No: 5)
+Loaded customer: Phillip Galleghar (ID: X212, Seq No: 6)
+Loaded customer: Lucy Grey (ID: X025, Seq No: 7)
+Loaded customer: Gillian Hamilton (ID: X386, Seq No: 8)
+Loaded customer: Jo Hill (ID: X285, Seq No: 9)
+Loaded customer: Jack Houston (ID: X733, Seq No: 10)
+Loaded customer: David Hunter (ID: X278, Seq No: 11)
+Loaded customer: Harry Johnston (ID: X857, Seq No: 12)
+Loaded customer: Ann Jones (ID: X064, Seq No: 13)
+Loaded customer: Carl Jones (ID: X212, Seq No: 14)
+Loaded customer: Gemma Kevin (ID: X888, Seq No: 15)
+Loaded customer: Tony Lawson (ID: X086, Seq No: 16)
+Loaded customer: Viola Nicholson (ID: X540, Seq No: 17)
+Loaded customer: Joe Woods (ID: X213, Seq No: 18)
+Added customer: John Brown (ID: X009, Seq No: 1)
+Queue sorted by customer surnames.
+Added customer: Mary Brown (ID: X198, Seq No: 2)
+Queue sorted by customer surnames.
+Added customer: Keith Burns (ID: X552, Seq No: 3)
+Queue sorted by customer surnames.
+Added customer: Pamela Field (ID: X521, Seq No: 4)
+Queue sorted by customer surnames.
+Added customer: Blair Foster (ID: X682, Seq No: 5)
+Queue sorted by customer surnames.
+Added customer: Phillip Galleghar (ID: X212, Seq No: 6)
+Queue sorted by customer surnames.
+Added customer: Lucy Grey (ID: X025, Seq No: 7)
+Queue sorted by customer surnames.
+Added customer: Gillian Hamilton (ID: X386, Seq No: 8)
+Queue sorted by customer surnames.
+Added customer: Jo Hill (ID: X285, Seq No: 9)
+Queue sorted by customer surnames.
+Added customer: Jack Houston (ID: X733, Seq No: 10)
+Queue sorted by customer surnames.
+Added customer: David Hunter (ID: X278, Seq No: 11)
+Queue sorted by customer surnames.
+Added customer: Harry Johnston (ID: X857, Seq No: 12)
+Queue sorted by customer surnames.
+Added customer: Ann Jones (ID: X064, Seq No: 13)
+Queue sorted by customer surnames.
+Added customer: Carl Jones (ID: X212, Seq No: 14)
+Queue sorted by customer surnames.
+Added customer: Gemma Kevin (ID: X888, Seq No: 15)
+Queue sorted by customer surnames.
+Added customer: Tony Lawson (ID: X086, Seq No: 16)
+Queue sorted by customer surnames.
+Added customer: Viola Nicholson (ID: X540, Seq No: 17)
+Queue sorted by customer surnames.
+Added customer: Joe Woods (ID: X213, Seq No: 18)
+Queue sorted by customer surnames.
+Finished loading customers.
+Print the Parcel Map
+Parcels in the map:
+Starting to read CSV file: src/View/Parcels.csv
+Calculated fee for Parcel ID: X020 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X020 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Discount applied for Parcel ID: X025 -> Discount: 5.0
+Calculated fee for Parcel ID: X025 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 5.0, Total Price: 7.0
+Added parcel with ID: X025 with default status: COLLECTING, Fee: 7.0, Discount: 5.0, Total Price: 7.0
+Late fee applied for Parcel ID: X036 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X036 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 23.0
+Added parcel with ID: X036 with default status: COLLECTING, Fee: 23.0, Discount: 0.0, Total Price: 23.0
+Late fee applied for Parcel ID: X064 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X064 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 23.0
+Added parcel with ID: X064 with default status: COLLECTING, Fee: 23.0, Discount: 0.0, Total Price: 23.0
+Calculated fee for Parcel ID: X086 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 18.0
+Added parcel with ID: X086 with default status: COLLECTING, Fee: 18.0, Discount: 0.0, Total Price: 18.0
+Calculated fee for Parcel ID: X121 -> Base Fee: 10.0, Weight Fee: 14.0, Discount: 0.0, Total Price: 24.0
+Added parcel with ID: X121 with default status: COLLECTING, Fee: 24.0, Discount: 0.0, Total Price: 24.0
+Late fee applied for Parcel ID: X198 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X198 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 28.0
+Added parcel with ID: X198 with default status: COLLECTING, Fee: 28.0, Discount: 0.0, Total Price: 28.0
+Calculated fee for Parcel ID: X213 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 26.0
+Added parcel with ID: X213 with default status: COLLECTING, Fee: 26.0, Discount: 0.0, Total Price: 26.0
+Calculated fee for Parcel ID: X214 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 26.0
+Added parcel with ID: X214 with default status: COLLECTING, Fee: 26.0, Discount: 0.0, Total Price: 26.0
+Calculated fee for Parcel ID: X278 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X278 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Discount applied for Parcel ID: X285 -> Discount: 5.0
+Calculated fee for Parcel ID: X285 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 5.0, Total Price: 13.0
+Added parcel with ID: X285 with default status: COLLECTING, Fee: 13.0, Discount: 5.0, Total Price: 13.0
+Calculated fee for Parcel ID: X309 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X309 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Late fee applied for Parcel ID: X316 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X316 -> Base Fee: 10.0, Weight Fee: 10.0, Discount: 0.0, Total Price: 30.0
+Added parcel with ID: X316 with default status: COLLECTING, Fee: 30.0, Discount: 0.0, Total Price: 30.0
+Late fee applied for Parcel ID: X386 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X386 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X386 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Discount applied for Parcel ID: X475 -> Discount: 5.0
+Calculated fee for Parcel ID: X475 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 5.0, Total Price: 11.0
+Added parcel with ID: X475 with default status: COLLECTING, Fee: 11.0, Discount: 5.0, Total Price: 11.0
+Calculated fee for Parcel ID: X507 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X507 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Calculated fee for Parcel ID: X521 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 18.0
+Added parcel with ID: X521 with default status: COLLECTING, Fee: 18.0, Discount: 0.0, Total Price: 18.0
+Late fee applied for Parcel ID: X540 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X540 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 24.0
+Added parcel with ID: X540 with default status: COLLECTING, Fee: 24.0, Discount: 0.0, Total Price: 24.0
+Calculated fee for Parcel ID: X552 -> Base Fee: 10.0, Weight Fee: 10.0, Discount: 0.0, Total Price: 20.0
+Added parcel with ID: X552 with default status: COLLECTING, Fee: 20.0, Discount: 0.0, Total Price: 20.0
+Late fee applied for Parcel ID: X606 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X606 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 31.0
+Added parcel with ID: X606 with default status: COLLECTING, Fee: 31.0, Discount: 0.0, Total Price: 31.0
+Calculated fee for Parcel ID: X682 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X682 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X720 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X720 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Calculated fee for Parcel ID: X733 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X733 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X746 -> Base Fee: 10.0, Weight Fee: 8.0, Discount: 0.0, Total Price: 18.0
+Added parcel with ID: X746 with default status: COLLECTING, Fee: 18.0, Discount: 0.0, Total Price: 18.0
+Calculated fee for Parcel ID: X780 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X780 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Calculated fee for Parcel ID: X782 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X782 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Calculated fee for Parcel ID: X857 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X857 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X904 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X904 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Calculated fee for Parcel ID: X919 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 26.0
+Added parcel with ID: X919 with default status: COLLECTING, Fee: 26.0, Discount: 0.0, Total Price: 26.0
+Calculated fee for Parcel ID: X233 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X233 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Late fee applied for Parcel ID: X212 -> Days in Depot: 21, Late Fee: 70.0
+Calculated fee for Parcel ID: X212 -> Base Fee: 10.0, Weight Fee: 42.0, Discount: 0.0, Total Price: 122.0
+Added parcel with ID: X212 with default status: COLLECTING, Fee: 122.0, Discount: 0.0, Total Price: 122.0
+Late fee applied for Parcel ID: X999 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X999 -> Base Fee: 10.0, Weight Fee: 18.0, Discount: 0.0, Total Price: 38.0
+Added parcel with ID: X999 with default status: COLLECTING, Fee: 38.0, Discount: 0.0, Total Price: 38.0
+Late fee applied for Parcel ID: X888 -> Days in Depot: 8, Late Fee: 5.0
+Calculated fee for Parcel ID: X888 -> Base Fee: 10.0, Weight Fee: 16.0, Discount: 0.0, Total Price: 31.0
+Added parcel with ID: X888 with default status: COLLECTING, Fee: 31.0, Discount: 0.0, Total Price: 31.0
+Discount applied for Parcel ID: X555 -> Discount: 5.0
+Calculated fee for Parcel ID: X555 -> Base Fee: 10.0, Weight Fee: 10.0, Discount: 5.0, Total Price: 15.0
+Added parcel with ID: X555 with default status: COLLECTING, Fee: 15.0, Discount: 5.0, Total Price: 15.0
+Calculated fee for Parcel ID: X111 -> Base Fee: 10.0, Weight Fee: 2.0, Discount: 0.0, Total Price: 12.0
+Added parcel with ID: X111 with default status: COLLECTING, Fee: 12.0, Discount: 0.0, Total Price: 12.0
+Calculated fee for Parcel ID: X666 -> Base Fee: 10.0, Weight Fee: 12.0, Discount: 0.0, Total Price: 22.0
+Added parcel with ID: X666 with default status: COLLECTING, Fee: 22.0, Discount: 0.0, Total Price: 22.0
+Calculated fee for Parcel ID: X333 -> Base Fee: 10.0, Weight Fee: 6.0, Discount: 0.0, Total Price: 16.0
+Added parcel with ID: X333 with default status: COLLECTING, Fee: 16.0, Discount: 0.0, Total Price: 16.0
+Calculated fee for Parcel ID: X222 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X222 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Calculated fee for Parcel ID: X344 -> Base Fee: 10.0, Weight Fee: 4.0, Discount: 0.0, Total Price: 14.0
+Added parcel with ID: X344 with default status: COLLECTING, Fee: 14.0, Discount: 0.0, Total Price: 14.0
+Late fee applied for Parcel ID: X123 -> Days in Depot: 9, Late Fee: 10.0
+Calculated fee for Parcel ID: X123 -> Base Fee: 10.0, Weight Fee: 18.0, Discount: 0.0, Total Price: 38.0
+Added parcel with ID: X123 with default status: COLLECTING, Fee: 38.0, Discount: 0.0, Total Price: 38.0
+Finished reading CSV file: src/View/Parcels.csv
+Starting to load customers from: src/View/Customers.csv
+Loaded customer: John Brown (ID: X009, Seq No: 1)
+Loaded customer: Mary Brown (ID: X198, Seq No: 2)
+Loaded customer: Keith Burns (ID: X552, Seq No: 3)
+Loaded customer: Pamela Field (ID: X521, Seq No: 4)
+Loaded customer: Blair Foster (ID: X682, Seq No: 5)
+Loaded customer: Phillip Galleghar (ID: X212, Seq No: 6)
+Loaded customer: Lucy Grey (ID: X025, Seq No: 7)
+Loaded customer: Gillian Hamilton (ID: X386, Seq No: 8)
+Loaded customer: Jo Hill (ID: X285, Seq No: 9)
+Loaded customer: Jack Houston (ID: X733, Seq No: 10)
+Loaded customer: David Hunter (ID: X278, Seq No: 11)
+Loaded customer: Harry Johnston (ID: X857, Seq No: 12)
+Loaded customer: Ann Jones (ID: X064, Seq No: 13)
+Loaded customer: Carl Jones (ID: X212, Seq No: 14)
+Loaded customer: Gemma Kevin (ID: X888, Seq No: 15)
+Loaded customer: Tony Lawson (ID: X086, Seq No: 16)
+Loaded customer: Viola Nicholson (ID: X540, Seq No: 17)
+Loaded customer: Joe Woods (ID: X213, Seq No: 18)
+Added customer: John Brown (ID: X009, Seq No: 1)
+Queue sorted by customer surnames.
+Added customer: Mary Brown (ID: X198, Seq No: 2)
+Queue sorted by customer surnames.
+Added customer: Keith Burns (ID: X552, Seq No: 3)
+Queue sorted by customer surnames.
+Added customer: Pamela Field (ID: X521, Seq No: 4)
+Queue sorted by customer surnames.
+Added customer: Blair Foster (ID: X682, Seq No: 5)
+Queue sorted by customer surnames.
+Added customer: Phillip Galleghar (ID: X212, Seq No: 6)
+Queue sorted by customer surnames.
+Added customer: Lucy Grey (ID: X025, Seq No: 7)
+Queue sorted by customer surnames.
+Added customer: Gillian Hamilton (ID: X386, Seq No: 8)
+Queue sorted by customer surnames.
+Added customer: Jo Hill (ID: X285, Seq No: 9)
+Queue sorted by customer surnames.
+Added customer: Jack Houston (ID: X733, Seq No: 10)
+Queue sorted by customer surnames.
+Added customer: David Hunter (ID: X278, Seq No: 11)
+Queue sorted by customer surnames.
+Added customer: Harry Johnston (ID: X857, Seq No: 12)
+Queue sorted by customer surnames.
+Added customer: Ann Jones (ID: X064, Seq No: 13)
+Queue sorted by customer surnames.
+Added customer: Carl Jones (ID: X212, Seq No: 14)
+Queue sorted by customer surnames.
+Added customer: Gemma Kevin (ID: X888, Seq No: 15)
+Queue sorted by customer surnames.
+Added customer: Tony Lawson (ID: X086, Seq No: 16)
+Queue sorted by customer surnames.
+Added customer: Viola Nicholson (ID: X540, Seq No: 17)
+Queue sorted by customer surnames.
+Added customer: Joe Woods (ID: X213, Seq No: 18)
+Queue sorted by customer surnames.
+Finished loading customers.
+Printing the Customer Queue
+Customer in queue: John Brown (ID: X009, Seq No: 1)
+Customer in queue: Mary Brown (ID: X198, Seq No: 2)
+Customer in queue: Keith Burns (ID: X552, Seq No: 3)
+Customer in queue: Pamela Field (ID: X521, Seq No: 4)
+Customer in queue: Blair Foster (ID: X682, Seq No: 5)
+Customer in queue: Phillip Galleghar (ID: X212, Seq No: 6)
+Customer in queue: Lucy Grey (ID: X025, Seq No: 7)
+Customer in queue: Gillian Hamilton (ID: X386, Seq No: 8)
+Customer in queue: Jo Hill (ID: X285, Seq No: 9)
+Customer in queue: Jack Houston (ID: X733, Seq No: 10)
+Customer in queue: David Hunter (ID: X278, Seq No: 11)
+Customer in queue: Harry Johnston (ID: X857, Seq No: 12)
+Customer in queue: Ann Jones (ID: X064, Seq No: 13)
+Customer in queue: Carl Jones (ID: X212, Seq No: 14)
+Customer in queue: Gemma Kevin (ID: X888, Seq No: 15)
+Customer in queue: Tony Lawson (ID: X086, Seq No: 16)
+Customer in queue: Viola Nicholson (ID: X540, Seq No: 17)
+Customer in queue: Joe Woods (ID: X213, Seq No: 18)
+Printed the Customer Queue
+Added customer: Oscar Wilde (ID: X222, Seq No: 19)
+Queue sorted by customer surnames.
+Worker added customer: Oscar Wilde (ID: X222, Seq No: 18)
+Added Customer: Oscar Wilde (ID: X222)
+Customer in queue: John Brown (ID: X009, Seq No: 1)
+Customer in queue: Mary Brown (ID: X198, Seq No: 2)
+Customer in queue: Keith Burns (ID: X552, Seq No: 3)
+Customer in queue: Pamela Field (ID: X521, Seq No: 4)
+Customer in queue: Blair Foster (ID: X682, Seq No: 5)
+Customer in queue: Phillip Galleghar (ID: X212, Seq No: 6)
+Customer in queue: Lucy Grey (ID: X025, Seq No: 7)
+Customer in queue: Gillian Hamilton (ID: X386, Seq No: 8)
+Customer in queue: Jo Hill (ID: X285, Seq No: 9)
+Customer in queue: Jack Houston (ID: X733, Seq No: 10)
+Customer in queue: David Hunter (ID: X278, Seq No: 11)
+Customer in queue: Harry Johnston (ID: X857, Seq No: 12)
+Customer in queue: Ann Jones (ID: X064, Seq No: 13)
+Customer in queue: Carl Jones (ID: X212, Seq No: 14)
+Customer in queue: Gemma Kevin (ID: X888, Seq No: 15)
+Customer in queue: Tony Lawson (ID: X086, Seq No: 16)
+Customer in queue: Viola Nicholson (ID: X540, Seq No: 17)
+Customer in queue: Oscar Wilde (ID: X222, Seq No: 18)
+Customer in queue: Joe Woods (ID: X213, Seq No: 19)

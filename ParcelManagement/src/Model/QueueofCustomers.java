@@ -18,7 +18,7 @@ public class QueueofCustomers {
         customer.setSeqNo(seqNo);
         queue.add(customer);
 
-        log.addLog("Added customer: " + customer);
+        System.out.println("Added customer: " + customer);
 
         // Sort the queue by surname
         sortQueueBySurname();
@@ -36,23 +36,23 @@ public class QueueofCustomers {
             queue.add(customer);
         }
 
-        log.addLog("Queue sorted by customer surnames.");
+        System.out.println("Queue sorted by customer surnames.");
     }
 
 
     public Customer processCustomer() {
         Customer customer = queue.poll();
         if (customer != null) {
-            log.addLog("Processing customer: " + customer);
+            System.out.println("Processing customer: " + customer);
         } else {
-            log.addLog("No customers to process.");
+        	System.out.println("No customers to process.");
         }
         return customer;
     }
 
     // Load customers from CSV into the queue
     public void loadCustomersFromCSV() {
-        log.addLog("Starting to load customers from: " + CSV_FILE_PATH);
+        System.out.println("Starting to load customers from: " + CSV_FILE_PATH);
         List<Customer> customerList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
             String line;
@@ -67,9 +67,9 @@ public class QueueofCustomers {
 
                     Customer customer = new Customer(customerName, customerId, seqNo++);
                     customerList.add(customer);
-                    log.addLog("Loaded customer: " + customer);
+                    System.out.println("Loaded customer: " + customer);
                 } else {
-                    log.addLog("Invalid data format in CSV line: " + line);
+                    System.out.println("Invalid data format in CSV line: " + line);
                 }
             }
 
@@ -79,9 +79,9 @@ public class QueueofCustomers {
                 addCustomer(customer);
             }
 
-            log.addLog("Finished loading customers.");
+            System.out.println("Finished loading customers.");
         } catch (IOException e) {
-            log.addLog("Error reading CSV file: " + e.getMessage());
+            System.out.println("Error reading CSV file: " + e.getMessage());
         }
     }
 
@@ -99,7 +99,7 @@ public class QueueofCustomers {
                 updatedList.add(customer);
             } else {
                 found = true;
-                log.addLog("Deleted customer: " + customer);
+                System.out.println("Deleted customer: " + customer);
             }
         }
 
@@ -107,9 +107,8 @@ public class QueueofCustomers {
             queue.clear();
             queue.addAll(updatedList);
             saveCustomersToCSV(updatedList); 
-            System.out.println("Customer with Sequence Number " + seqNo + " has been deleted.");
+            log.addLog("Customer with Sequence Number " + seqNo + " has been deleted.");
         } else {
-            log.addLog("Customer with Sequence Number " + seqNo + " not found.");
             System.out.println("Customer with Sequence Number " + seqNo + " not found.");
         }
     }
@@ -121,9 +120,9 @@ public class QueueofCustomers {
             for (Customer customer : updatedList) {
                 writer.write(customer.getName() + "," + customer.getId() + "," + customer.getSeqNo() + "\n");
             }
-            log.addLog("Updated customers saved to CSV.");
+            System.out.println("Updated customers saved to CSV.");
         } catch (IOException e) {
-            log.addLog("Error saving customers to CSV: " + e.getMessage());
+            System.out.println("Error saving customers to CSV: " + e.getMessage());
         }
     }
 
@@ -131,15 +130,25 @@ public class QueueofCustomers {
     public void printQueue() {
         if (queue.isEmpty()) {
             System.out.println("No customers in the queue.");
-            log.addLog("No customers in the queue.");
+            System.out.println("No customers in the queue.");
         } else {
             System.out.println("Customers in the queue:");
             for (Customer customer : queue) {
                 System.out.println(customer);
-                log.addLog("Customer in queue: " + customer);
+//                System.out.println("Customer in queue: " + customer);
             }
         }
     }
+    
+    public Customer getCustomerBySeqNo(int seqNo) {
+        for (Customer customer : queue) {
+            if (customer.getSeqNo() == seqNo) {
+                return customer;
+            }
+        }
+        return null; // Return null if customer with given seqNo is not found
+    }
+
     
     
 }
