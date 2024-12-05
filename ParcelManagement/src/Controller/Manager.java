@@ -16,23 +16,23 @@ public class Manager {
 	
     public static void main(String[] args) {
         // Initialize necessary objects
-        Log log = Log.getInstance();  // This will get the same Log instance every time
-        log.clearLogFile(); // Clear the log file
+        Log log = Log.getInstance();  // Singleton pattern
+        log.clearLogFile(); // Clear the log text file
 
         ParcelMap parcelMap = new ParcelMap(log);
         QueueofCustomers queueOfCustomers = new QueueofCustomers(log);
         Worker worker = new Worker(log);
 
-        // Load data
+        // Load data from csv files
         parcelMap.loadParcelsFromCSV("src/View/Parcels.csv");
         queueOfCustomers.loadCustomersFromCSV();
 
-        // Main frame setup
+        // Manager Dashboard setup
         JFrame frame = new JFrame("Manager Dashboard");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
 
-        // Buttons for main dashboard
+        // Buttons for Manager Dashboard
         JButton customerViewButton = new JButton("Customer View");
         JButton parcelViewButton = new JButton("Parcel View");
 
@@ -53,12 +53,13 @@ public class Manager {
 
         // Add components to the main frame
         frame.setLayout(new BorderLayout());
-        frame.add(displayLabel, BorderLayout.NORTH);
+        frame.add(displayLabel, BorderLayout.NORTH); //Buttons at the top of the Panel
         frame.add(buttonPanel, BorderLayout.CENTER);
 
         // Display the main frame
         frame.setVisible(true);
         
+     //CUSTOMER VIEW
      // Customer View button action
         customerViewButton.addActionListener(e -> {
             System.out.println("Entering the Customer View");
@@ -88,93 +89,39 @@ public class Manager {
             JScrollPane scrollPane = new JScrollPane(customerArea);
 
             // Create buttons for adding and deleting customers
+            JButton backButton = new JButton("Back to Main Panel");
             JButton addCustomerButton = new JButton("Add Customer");
             JButton deleteCustomerButton = new JButton("Delete Customer");
             JButton RefreshButton = new JButton("Refresh the List");
-            JButton backButton = new JButton("Back to Main Panel");
             JButton ReceiveParcelButton = new JButton("Receive Parcel");
+            
+         // Panel setup for buttons and scroll
+            JPanel actionPanel = new JPanel();
+            actionPanel.add(backButton); //Go back to the Manager Dashboard
+            actionPanel.add(addCustomerButton); //Add a customer
+            actionPanel.add(deleteCustomerButton); //Delete a customer
+            actionPanel.add(ReceiveParcelButton); //Receive a parcel
+            actionPanel.add(RefreshButton); //Refresh the parcel list
+            
+            // Add components to customer frame
+            customerFrame.add(actionPanel, BorderLayout.NORTH);
+            customerFrame.add(scrollPane, BorderLayout.CENTER);
+            customerFrame.setVisible(true);
+
          
             // Set button font
+            backButton.setFont(new Font("Arial", Font.PLAIN, 16));
             addCustomerButton.setFont(new Font("Arial", Font.PLAIN, 16));
             deleteCustomerButton.setFont(new Font("Arial", Font.PLAIN, 16));
             RefreshButton.setFont(new Font("Arial", Font.PLAIN, 16));
-            backButton.setFont(new Font("Arial", Font.PLAIN, 16));
             ReceiveParcelButton.setFont(new Font("Arial", Font.PLAIN, 16));
 
-            ReceiveParcelButton.addActionListener(e4 -> {
-                // Get the customer with sequence number 1
-                Customer customer = queueOfCustomers.getCustomerBySeqNo(1);  // assuming seq 1 for the demo
-                if (customer != null) {
-                    // Retrieve the parcel associated with the customer
-                    Parcel parcel = parcelMap.getParcelById(customer.getId());
-
-                    if (parcel != null) {
-                        // Create a new JFrame for displaying the parcel collection info
-                        JFrame parcelFrame = new JFrame("Parcel Collection Confirmation");
-                        parcelFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                        parcelFrame.setSize(500, 400);
-                        parcelFrame.setLayout(new BorderLayout());
-
-                        // Construct the message to display in the dialog
-                        String message = "Sequence number: " + customer.getSeqNo() + "\n" +
-                                         "Name of the customer: " + customer.getName() + "\n" +
-                                         "Is the user here to collect the parcel: " + parcel.getId() + "\n" +
-                                         "Total: " + parcel.getTotalPrice() + "\n" +
-                                         "Would the customer like to receive their parcel?";
-
-                        // Create a label to display the message
-                        JLabel label = new JLabel("<html>" + message.replace("\n", "<br>") + "</html>", SwingConstants.CENTER);
-                        label.setFont(new Font("Arial", Font.PLAIN, 14));
-                        parcelFrame.add(label, BorderLayout.CENTER);
-
-                        // Create buttons for Yes and No
-                        JPanel buttonPanelForYesNo = new JPanel();
-                        JButton yesButton = new JButton("Yes");
-                        JButton noButton = new JButton("No");
-
-                     // Yes button action - change parcel status and remove customer
-                        yesButton.addActionListener(e6 -> {
-                            // Change the parcel status to "COLLECTED"
-                            parcel.setStatus("COLLECTED");
-
-                            // Remove the customer from the queue
-                            queueOfCustomers.deleteCustomerBySeqNo(1);
-
-                            // Notify the user and close the frame
-                            JOptionPane.showMessageDialog(parcelFrame, "You have confirmed to collect the parcel.");
-                            parcelFrame.dispose(); // Close the confirmation frame
-                        });
-
-                        // No button action - simply close the frame
-                        noButton.addActionListener(e6 -> {
-                            parcelFrame.dispose(); // Close the frame without doing anything
-                        });
-
-                        // Add buttons to the panel
-                        buttonPanelForYesNo.add(yesButton);
-                        buttonPanelForYesNo.add(noButton);
-
-
-                        // Add the button panel to the frame
-                        parcelFrame.add(buttonPanelForYesNo, BorderLayout.SOUTH);  // This will only show the Yes/No buttons
-
-                        // Display the frame
-                        parcelFrame.setVisible(true);
-                    } else {
-                        JOptionPane.showMessageDialog(frame, "No parcel found for the customer.", "Error", JOptionPane.ERROR_MESSAGE);
-                    }
-                } else {
-                    JOptionPane.showMessageDialog(frame, "No customer found with sequence number 1.", "Error", JOptionPane.ERROR_MESSAGE);
-                }
-            });
-
-                   
+            //Function for the Back Button
             backButton.addActionListener(e4 -> {
                 customerFrame.dispose(); // Close the Customer View window
-                frame.setVisible(true);  // Show the Main Dashboard again
+                frame.setVisible(true);  // Show the Manager Dashboard again
             });
-
-       
+            
 
          // Add Customer Button action
             addCustomerButton.addActionListener(e1 -> {
@@ -195,7 +142,7 @@ public class Manager {
                 formPanel.add(parcelIdLabel);
                 formPanel.add(parcelIdField);
 
-                // Create Add button and define its action
+                // Create Add button and add its logic
                 JButton addButton = new JButton("Add");
                 addButton.addActionListener(e2 -> {
                 	System.out.println("Adding a Customer");
@@ -238,6 +185,7 @@ public class Manager {
                         }
 
                         // Create and add the customer
+                        // Add it to the console and log text file
                         Customer newCustomer = new Customer(name, parcelId, 0); // Sequence auto-handled
                         System.out.println("Adding new Customer");
                         worker.addCustomer(newCustomer, queueOfCustomers);
@@ -295,6 +243,7 @@ public class Manager {
                 }
             });
             
+            //Refresh the queue of Customers
             RefreshButton.addActionListener(e3 -> {
             	log.addLog("Refreshes the Customer List");
                 // Capture the customer list output again after refreshing
@@ -307,25 +256,79 @@ public class Manager {
                 String refreshedCustomerList = baosRefresh.toString();
                 customerArea.setText(refreshedCustomerList);
             });
-            // Panel setup for buttons and scroll
-            JPanel actionPanel = new JPanel();
-            actionPanel.add(addCustomerButton);
-            actionPanel.add(deleteCustomerButton);
-            actionPanel.add(RefreshButton);
-            actionPanel.add(backButton);
-            actionPanel.add(ReceiveParcelButton);
+            
+            
+            //If the customer is here to receive the parcel
+            //Validation if the parcel is not in the list of parcels and the user is here to collect it
+            ReceiveParcelButton.addActionListener(e4 -> {
+                // Get the customer with sequence number 1
+                Customer customer = queueOfCustomers.getCustomerBySeqNo(1);  // seq 1 since we are using a queue (LIFO)
+                if (customer != null) {
+                    // Retrieve the parcel for the customer with a seq of 1
+                    Parcel parcel = parcelMap.getParcelById(customer.getId());
 
+                    if (parcel != null) {
+                        // Create a new JFrame for displaying the info
+                        JFrame parcelFrame = new JFrame("Parcel Collection Confirmation");
+                        parcelFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                        parcelFrame.setSize(500, 400);
+                        parcelFrame.setLayout(new BorderLayout());
+
+                        //Seq number, name, total, parcelid and whether the user is here to collect it
+                        String message = "Sequence number: " + customer.getSeqNo() + "\n" +
+                                         "Name of the customer: " + customer.getName() + "\n" +
+                                         "Is the user here to collect the parcel: " + parcel.getId() + "\n" +
+                                         "Total: " + parcel.getTotalPrice() + "\n" +
+                                         "Would the customer like to receive their parcel?";
+
+                        JLabel label = new JLabel("<html>" + message.replace("\n", "<br>") + "</html>", SwingConstants.CENTER);
+                        label.setFont(new Font("Arial", Font.PLAIN, 14));
+                        parcelFrame.add(label, BorderLayout.CENTER);
+
+                        // Create buttons for Yes and No
+                        JPanel buttonPanelForYesNo = new JPanel();
+                        JButton yesButton = new JButton("Yes");
+                        JButton noButton = new JButton("No");
+
+                        // if yes - change parcel status and remove customer
+                        yesButton.addActionListener(e6 -> {
+                            // Change the parcel status to "COLLECTED"
+                            parcel.setStatus("COLLECTED");
+
+                            // Remove the customer
+                            queueOfCustomers.deleteCustomerBySeqNo(1);
+
+                            JOptionPane.showMessageDialog(parcelFrame, "You have confirmed to collect the parcel.");
+                            parcelFrame.dispose();
+                        });
+
+                        // if No - simply close the frame
+                        noButton.addActionListener(e6 -> {
+                            parcelFrame.dispose(); // Close the frame without doing anything
+                        });
+
+                        buttonPanelForYesNo.add(yesButton);
+                        buttonPanelForYesNo.add(noButton);
+
+
+                        parcelFrame.add(buttonPanelForYesNo, BorderLayout.SOUTH);  // This will only show the Yes/No buttons
+
+                        parcelFrame.setVisible(true);
+                    } else {
+                        JOptionPane.showMessageDialog(frame, "No parcel found for the customer.", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(frame, "No customer found with sequence number 1.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            });
 
             
-            // Add components to customer frame
-            customerFrame.add(actionPanel, BorderLayout.NORTH);
-            customerFrame.add(scrollPane, BorderLayout.CENTER);
-            customerFrame.setVisible(true);
         });
-
-
+        
+        
 
         
+        // PARCEL VIEW
         // Parcel View button action
         parcelViewButton.addActionListener(e -> {
             JFrame parcelFrame = new JFrame("Parcel View");
@@ -337,6 +340,7 @@ public class Manager {
             PrintStream originalSystemOut = System.out;
             System.setOut(printStream);
 
+            //Prints the list of parcels
             log.addLog("Print the Parcel Map");
             parcelMap.printParcelMap();
             System.setOut(originalSystemOut);
@@ -349,41 +353,46 @@ public class Manager {
             JScrollPane scrollPane = new JScrollPane(parcelMapArea);
 
             // Buttons for the Parcel View
+            JButton backButton = new JButton("Back to Main Panel");
             JButton searchParcelButton = new JButton("Search Parcel");
             JButton addParcelButton = new JButton("Add Parcel");
             JButton deleteParcelButton = new JButton("Delete Parcel");
+            JButton CollectedListButton = new JButton("Collected List");
             JButton RefreshButton = new JButton("Refresh the List");
-            JButton WaitingListButton = new JButton("Waiting List");
-            JButton backButton = new JButton("Back to Main Panel");
-
             
             Font buttonFont = new Font("Arial", Font.PLAIN, 16);
+            backButton.setFont(buttonFont);
             searchParcelButton.setFont(buttonFont);
             addParcelButton.setFont(buttonFont);
             deleteParcelButton.setFont(buttonFont);
             RefreshButton.setFont(buttonFont);
-            backButton.setFont(new Font("Arial", Font.PLAIN, 16));
-            WaitingListButton.setFont(new Font("Arial", Font.PLAIN, 16));
-
+            CollectedListButton.setFont(buttonFont);
 
             
             // Add buttons to panel
             JPanel parcelButtonPanel = new JPanel(new FlowLayout());
+            parcelButtonPanel.add(backButton);
             parcelButtonPanel.add(searchParcelButton);
             parcelButtonPanel.add(addParcelButton);
             parcelButtonPanel.add(deleteParcelButton);
+            parcelButtonPanel.add(CollectedListButton);
             parcelButtonPanel.add(RefreshButton);
-            parcelButtonPanel.add(backButton);
-            parcelButtonPanel.add(WaitingListButton);
 
             
             parcelFrame.setLayout(new BorderLayout());
             parcelFrame.add(scrollPane, BorderLayout.CENTER);
             parcelFrame.add(parcelButtonPanel, BorderLayout.NORTH);
 
+            
+            backButton.addActionListener(e4 -> {
+                parcelFrame.dispose(); // Close the Parcel View frame
+                frame.setVisible(true); // Show the main frame
+            });
+            
+            
+            //Function to search for the parcels using the ID 
             searchParcelButton.addActionListener(searchEvent -> {
             	System.out.println("Searching for Parcel in List...");
-                // Prompt user for Parcel ID to search for
                 String parcelIdToSearch = JOptionPane.showInputDialog(parcelFrame, "Enter the Parcel ID to search for:");
 
                 if (parcelIdToSearch != null && !parcelIdToSearch.trim().isEmpty()) {
@@ -398,53 +407,10 @@ public class Manager {
                     JOptionPane.showMessageDialog(parcelFrame, "Parcel ID is invalid or empty.");
                 }
             });
-            
-            
-            
-            WaitingListButton.addActionListener(e3 -> {
-                JFrame collectedFrame = new JFrame("Collected Parcels");
-                System.out.println("Displaying Collected Parcels");
-                collectedFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                collectedFrame.setSize(900, 500);
-
-                // Redirect System.out to a ByteArrayOutputStream
-                ByteArrayOutputStream baoss = new ByteArrayOutputStream();
-                PrintStream printStreamm = new PrintStream(baoss);
-                PrintStream originalSystemOutt = System.out;
-                System.setOut(printStreamm);
-
-                
-                // Log and print the collected parcels
-                log.addLog("Print the Collected Parcel List");
-                parcelMap.printCollectedParcels(); // Method to print parcels with COLLECTED status
-                System.setOut(originalSystemOutt);
-
-                // Display the collected parcels in a JTextArea
-                String collectedParcelsList = baoss.toString();
-                JTextArea collectedParcelsArea = new JTextArea(15, 40);
-                collectedParcelsArea.setText(collectedParcelsList);
-                collectedParcelsArea.setEditable(false);
-                JScrollPane scrollPanee = new JScrollPane(collectedParcelsArea);
-
-                // Add the JTextArea (scrollPanee) to the new frame
-                collectedFrame.setLayout(new BorderLayout());
-                collectedFrame.add(scrollPanee, BorderLayout.CENTER);
-
-                collectedFrame.setVisible(true);
-            });
-
-
-
-            
-            
-            backButton.addActionListener(e4 -> {
-                parcelFrame.dispose(); // Close the Parcel View frame
-                frame.setVisible(true); // Show the main frame
-            });
-
 
             
             // Add Parcel
+            //Validations for every input, making sure that the right data is entered
             addParcelButton.addActionListener(e1 -> {
                 JFrame addParcelFrame = new JFrame("Add Parcel");
                 addParcelFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -625,8 +591,37 @@ public class Manager {
                 String refreshedParcelList = baosRefresh.toString();
                 parcelMapArea.setText(refreshedParcelList);
             });
-        
+            
+            
+         // Function to list the parcels with the status COLLECTED
+            CollectedListButton.addActionListener(e3 -> {
+                JFrame collectedFrame = new JFrame("Collected Parcels");
+                System.out.println("Displaying Collected Parcels");
+                collectedFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                collectedFrame.setSize(900, 500);
 
+                ByteArrayOutputStream baoss = new ByteArrayOutputStream();
+                PrintStream printStreamm = new PrintStream(baoss);
+                PrintStream originalSystemOutt = System.out;
+                System.setOut(printStreamm);
+
+                
+                // Log and print the collected parcels
+                log.addLog("Print the Collected Parcel List");
+                parcelMap.printCollectedParcels(); // Runs through the list and filters out parcels eith the status of COLLECTED
+                System.setOut(originalSystemOutt);
+
+                String collectedParcelsList = baoss.toString();
+                JTextArea collectedParcelsArea = new JTextArea(15, 40);
+                collectedParcelsArea.setText(collectedParcelsList);
+                collectedParcelsArea.setEditable(false);
+                JScrollPane scrollPanee = new JScrollPane(collectedParcelsArea);
+
+                collectedFrame.setLayout(new BorderLayout());
+                collectedFrame.add(scrollPanee, BorderLayout.CENTER);
+
+                collectedFrame.setVisible(true);
+            });
            
             parcelFrame.setVisible(true);
 

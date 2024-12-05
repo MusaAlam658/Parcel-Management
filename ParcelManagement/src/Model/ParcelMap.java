@@ -15,6 +15,7 @@ public class ParcelMap {
         this.log = log;
     }
 
+    //When adding the fee is calculated too
     public void addParcel(Parcel parcel) {
         // Calculate the parcel fee
         double fee = calculateFee(parcel);
@@ -118,9 +119,6 @@ public class ParcelMap {
             }
         }
     }
-
-
-
 
 
     //Calculate the parcel Fee

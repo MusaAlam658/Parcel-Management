@@ -35,6 +35,7 @@ public class Worker {
         }
     }
     
+    //Ensure that the parcel id is X followed by a 3 digit number
     public String getValidParcelId(Scanner scanner) {
         String parcelId;
         while (true) {
@@ -50,6 +51,7 @@ public class Worker {
         return parcelId;
     }
     
+    //Checks to see if the parcel is in the file otherwise upon retrieval it gives out an error
     public boolean isParcelIdInFile(String parcelId, String filePath) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -65,6 +67,7 @@ public class Worker {
         return false; 
     }
     
+    //Appends the customer to CSV
     public void appendCustomerToCSV(Customer customer, String filePath) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
             String customerData = customer.getName() + "," + customer.getId() + "," + customer.getSeqNo();
@@ -103,6 +106,7 @@ public class Worker {
     }
 
     
+    //Adds a customer
     public void addCustomer(Customer customer, QueueofCustomers customerQueue) {
         customerQueue.addCustomer(customer);
         System.out.println("Worker added customer: " + customer);

@@ -13,6 +13,8 @@ public class QueueofCustomers {
         this.log = log;
     }
 
+    //Method to add the customer
+    //Sequence number increases by 1
     public void addCustomer(Customer customer) {
     	int seqNo = queue.size() + 1;
         customer.setSeqNo(seqNo);
@@ -24,6 +26,7 @@ public class QueueofCustomers {
         sortQueueBySurname();
     }
     
+    //Sorts the Queue by the surname
     public void sortQueueBySurname() {
         List<Customer> customerList = new ArrayList<>(queue);
 
@@ -40,6 +43,7 @@ public class QueueofCustomers {
     }
 
 
+    //Gives an error if there are no customers in the list
     public Customer processCustomer() {
         Customer customer = queue.poll();
         if (customer != null) {
@@ -75,6 +79,7 @@ public class QueueofCustomers {
 
             customerList.sort(Comparator.comparing(c -> extractSurname(c.getName())));
 
+            //adding customers
             for (Customer customer : customerList) {
                 addCustomer(customer);
             }
@@ -85,6 +90,7 @@ public class QueueofCustomers {
         }
     }
 
+    //Extracting the surname to be able to sort 
     private String extractSurname(String name) {
         String[] parts = name.split(" ");
         return parts.length > 1 ? parts[1] : parts[0];
@@ -140,6 +146,7 @@ public class QueueofCustomers {
         }
     }
     
+    //Get the Seq number for the retrieval of the parcel
     public Customer getCustomerBySeqNo(int seqNo) {
         for (Customer customer : queue) {
             if (customer.getSeqNo() == seqNo) {

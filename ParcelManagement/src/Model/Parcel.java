@@ -12,6 +12,7 @@ public class Parcel {
     private double discount;
     private double totalPrice;
 
+    //attributes of a parcel
     public Parcel(String id, int daysInDepot, double weight, double length, double width, double height) {
         this.id = id;
         this.daysInDepot = daysInDepot;
@@ -40,7 +41,8 @@ public class Parcel {
     public double getTotalPrice() { return totalPrice; }
     public void setTotalPrice(double totalPrice) { this.totalPrice = totalPrice; }
 
- // Ensure getStatus is defined
+    // Ensure getStatus is defined
+    //Ensures that the status can be updated
     public String getStatus() { return status; }
 
     public void setStatus(String status) { 
